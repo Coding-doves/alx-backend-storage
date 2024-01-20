@@ -1,0 +1,7 @@
+-- SQL script that divides 2 int and returns the result
+DELIMITER $$
+CREATE FUNCTION SafeDiv(a INT, b INT) RETURNS FLOAT
+BEGIN
+    RETURN IF(b = 0, 0, a / b);
+END $$
+DELIMITER ;

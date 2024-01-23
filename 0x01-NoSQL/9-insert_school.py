@@ -4,4 +4,5 @@
 
 def insert_school(mongo_collection, **kwargs):
     ''' comment '''
-    return mongo_collection(kwargs)
+    store = mongo_collection.insert_one(kwargs)
+    return store.inserted_id

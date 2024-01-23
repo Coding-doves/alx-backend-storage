@@ -4,6 +4,4 @@
 
 def schools_by_topic(mongo_collection, topic):
     ''' comment '''
-    query = mongo_collection.find({"topic": topic})
-
-    return [lit for school in query]
+    return list(mongo_collection.find({"topic": topic}))

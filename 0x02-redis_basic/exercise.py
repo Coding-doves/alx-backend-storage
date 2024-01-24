@@ -44,7 +44,7 @@ def call_history(method: Callable) -> Callable:
     return increments_count
 
 
-class Cache():
+class Cache:
     ''' comment '''
     def __init__(self):
         '''initializing '''
@@ -69,7 +69,7 @@ class Cache():
             fn: Callable = None
             ) -> Union[str, bytes, int, float]:
         '''comment'''
-        self._redis.get(key)
+        data = self._redis.get(key)
         if fn is not None:
             return fn(data)
         else:
